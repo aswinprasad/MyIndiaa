@@ -13,7 +13,17 @@ const ProductList = () => {
     setIsLoading(true);
     fetch('https://fakestoreapi.com/products')
       .then((res) => res.json())
-      .then((json) => setProducts(json))
+      .then((json) => {
+        setProducts(json);
+        localStorage.setItem('products', JSON.stringify(json));
+      })
+      .catch((error) => {
+        console.error('Fetching products failed:', error);
+        const cachedProducts = localStorage.getItem('products');
+        if (cachedProducts) {
+          setProducts(JSON.parse(cachedProducts));
+        }
+      })
       .finally(() => setIsLoading(false));
   }, []);
 
