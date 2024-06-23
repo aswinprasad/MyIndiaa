@@ -3,18 +3,38 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold mb-4">Welcome to MyIndiaa</h1>
-      <p className="text-lg mb-8">
-        Empowering India with dropshipping business
-      </p>
-      <Link
-        to="/products"
-        className="bg-blue-500 text-white px-6 py-3 rounded-full text-lg"
-      >
-        Start Shopping
-      </Link>
-    </div>
+    <section class="flex flex-col items-center justify-center flex-1 bg-gray-900 p-4 text-center">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12 contents">
+        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+          Welcome to MyIndiaa
+        </h1>
+        <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+          Empowering India with dropshipping business
+        </p>
+        <Link to="/products">
+          <div class="flex flex-col mb-8 w-fit lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 btn-add rounded-lg cursor-pointer">
+            <div
+              to="/products"
+              class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
+            >
+              Start Shopping
+              <svg
+                class="ml-2 -mr-1 w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </Link>
+      </div>
+    </section>
   );
 };
 

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import ProductCard from './ProductCard';
-import { useDispatch } from 'react-redux';
-import { addToCart } from '../redux/reducers/cartReducer';
+import { useDispatch, useSelector } from 'react-redux';
+import { addToCart, removeFromCart } from '../redux/reducers/cartReducer';
 
 const ProductList = () => {
   const dispatch = useDispatch();
+  const cartItems = useSelector((state) => state.cart.items);
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -20,19 +21,34 @@ const ProductList = () => {
     dispatch(addToCart(product));
   };
 
-  if (isLoading) {
-    return <p>Loading...</p>;
-  }
+  const handleRemoveFromCart = (productId) => {
+    dispatch(removeFromCart(productId));
+  };
 
   return (
-    <div className="flex flex-wrap">
-      {products?.map((product) => (
-        <ProductCard
-          key={product.id}
-          product={product}
-          addToCart={handleAddToCart}
-        />
-      ))}
+    <div className="flex flex-wrap justify-center gap-5 w-full bg-gray-900">
+      {isLoading ? (
+        <p
+          className="text-center text-2xl font-semibold text-white mt-4"
+          data-testid="loading"
+        >
+          Loading...
+        </p>
+      ) : (
+        products.map((product) => {
+          const cartItem = cartItems.find((item) => item.id === product.id);
+          const quantity = cartItem ? cartItem.quantity : 0;
+          return (
+            <ProductCard
+              key={product.id}
+              product={product}
+              addToCart={handleAddToCart}
+              removeFromCart={handleRemoveFromCart}
+              quantity={quantity}
+            />
+          );
+        })
+      )}
     </div>
   );
 };

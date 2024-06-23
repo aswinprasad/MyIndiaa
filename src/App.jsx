@@ -9,10 +9,14 @@ import './App.css';
 const App = () => {
   return (
     <Router>
-      <Header />
-      <NavigationMenu />
-      <Routes />
-      <Footer />
+      <div className="flex flex-col min-h-screen">
+        <Header />
+        <NavigationMenu />
+        <div className="flex flex-grow">
+          <Routes />
+        </div>
+        <Footer />
+      </div>
     </Router>
   );
 };

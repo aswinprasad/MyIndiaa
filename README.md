@@ -1,32 +1,10 @@
 # MyIndiaa Frontend
 
-This repository contains the frontend implementation for an MyIndiaa. The application is built using React.js and Tailwind CSS, with state management handled by Redux. Additionally, the application is designed as a Progressive Web App (PWA) to provide offline capabilities and enhanced user experience.
+This repository contains the frontend implementation for MyIndiaa. The application is built using React.js and Tailwind CSS, with state management handled by Redux. Additionally, the application is designed as a Progressive Web App (PWA) to provide offline capabilities and enhanced user experience.
 
 ## Deployed Application
 
 You can access the deployed application [here](https://my-indiaa.vercel.app/).
-
-## Features
-
-1. **Component Creation**
-   - Reusable components such as Header, Footer, Product Card, and Navigation Menu.
-   - Components are designed following best practices for performance and maintainability.
-
-2. **State Management**
-   - Global state management using Redux.
-   - Local component state managed appropriately to ensure efficient state handling.
-
-3. **Responsive Design**
-   - Fully responsive interface across different devices and screen sizes.
-   - Tailwind CSS used to streamline the styling process.
-
-4. **PWA Implementation**
-   - Service workers implemented to enable offline capabilities.
-   - The application meets PWA standards for performance and user experience.
-
-5. **Additional Features**
-   - Product listing page fetching data from a mock API.
-   - Basic functionality including adding items to a shopping cart and viewing the cart.
 
 ## Installation
 
@@ -52,7 +30,7 @@ To run the application locally, follow these steps:
    npm run dev
    ```
 
-5. Open your browser and navigate to the localhost server to see the application in action.
+5. Open your browser and navigate to `http://localhost:5173` to see the application in action.
 
 ## Usage
 
