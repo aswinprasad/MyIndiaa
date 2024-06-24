@@ -7,11 +7,9 @@ This repository contains the frontend implementation for MyIndiaa. The applicati
 
 You can access the deployed application [here](https://my-indiaa.vercel.app/).
 
+<img src="https://github.com/aswinprasad/MyIndiaa/assets/47845913/1c66f510-1b16-4088-9c43-59de0942bbb9" data-canonical-src="https://github.com/aswinprasad/MyIndiaa/assets/47845913/1c66f510-1b16-4088-9c43-59de0942bbb9" width="500" />
 
-![my-indiaa vercel app_(Nest Hub Max)](https://github.com/aswinprasad/MyIndiaa/assets/47845913/1c66f510-1b16-4088-9c43-59de0942bbb9 =500x)
-
-![my-indiaa vercel app_(iPad Pro)](https://github.com/aswinprasad/MyIndiaa/assets/47845913/c093331e-ef0b-45ab-b6fd-18142177cdc7 =500x) ![my-indiaa vercel app_(iPhone 12 Pro)](https://github.com/aswinprasad/MyIndiaa/assets/47845913/01278275-cde9-4d50-931f-b7d66607d00d =173x)
-
+<img src="https://github.com/aswinprasad/MyIndiaa/assets/47845913/c093331e-ef0b-45ab-b6fd-18142177cdc7" data-canonical-src="https://github.com/aswinprasad/MyIndiaa/assets/47845913/c093331e-ef0b-45ab-b6fd-18142177cdc7" width="500" /> <span><img src="https://github.com/aswinprasad/MyIndiaa/assets/47845913/01278275-cde9-4d50-931f-b7d66607d00d" data-canonical-src="https://github.com/aswinprasad/MyIndiaa/assets/47845913/01278275-cde9-4d50-931f-b7d66607d00d" width="173" /></span>
 
 
 ## Installation
