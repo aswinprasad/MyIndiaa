@@ -4,7 +4,9 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 const manifestForPlugIn = {
   registerType: 'autoUpdate',
+  includeAssets: ['**/*.{js,css,html,ico,png,svg,json}'],
   workbox: {
+    globPatterns: ['**/*.{js,css,html,ico,png,svg,json}'],
     runtimeCaching: [
       {
         urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
@@ -19,7 +21,7 @@ const manifestForPlugIn = {
       },
       {
         urlPattern: /^https:\/\/fakestoreapi\.com\/products/,
-        handler: 'StaleWhileRevalidate',
+        handler: 'NetworkFirst',
         options: {
           cacheName: 'api-cache',
           expiration: {
@@ -30,6 +32,12 @@ const manifestForPlugIn = {
             statuses: [0, 200],
           },
         },
+      },
+    ],
+    additionalManifestEntries: [
+      {
+        url: 'https://fakestoreapi.com/products',
+        revision: null,
       },
     ],
   },
