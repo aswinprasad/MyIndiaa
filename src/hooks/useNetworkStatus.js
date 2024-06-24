@@ -13,9 +13,20 @@ const useNetworkStatus = (
     window.addEventListener('offline', updateOnlineStatus);
 
     const intervalId = setInterval(() => {
-      fetch(pingUrl, { method: 'HEAD', mode: 'no-cors' })
+      const controller = new AbortController();
+      const signal = controller.signal;
+
+      setTimeout(() => controller.abort(), 2000);
+
+      fetch(pingUrl, { method: 'HEAD', mode: 'no-cors', signal })
         .then(() => setIsOnline(true))
-        .catch(() => setIsOnline(false));
+        .catch((error) => {
+          if (error.name === 'AbortError') {
+            setIsOnline(false);
+          } else {
+            setIsOnline(false);
+          }
+        });
     }, interval);
 
     return () => {

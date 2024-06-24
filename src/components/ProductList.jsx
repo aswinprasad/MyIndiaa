@@ -36,7 +36,7 @@ const ProductList = () => {
   };
 
   return (
-    <div className="flex flex-wrap justify-center gap-5 w-full bg-gray-900">
+    <div className="flex flex-wrap justify-center gap-5 w-full bg-gray-900 py-5">
       {isLoading ? (
         <p
           className="text-center text-2xl font-semibold text-white mt-4"
