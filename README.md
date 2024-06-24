@@ -6,6 +6,13 @@ This repository contains the frontend implementation for MyIndiaa. The applicati
 
 You can access the deployed application [here](https://my-indiaa.vercel.app/).
 
+
+![my-indiaa vercel app_(Nest Hub Max)](https://github.com/aswinprasad/MyIndiaa/assets/47845913/1c66f510-1b16-4088-9c43-59de0942bbb9)
+
+![my-indiaa vercel app_(iPad Pro)](https://github.com/aswinprasad/MyIndiaa/assets/47845913/c093331e-ef0b-45ab-b6fd-18142177cdc7)
+
+![my-indiaa vercel app_(iPhone 12 Pro)](https://github.com/aswinprasad/MyIndiaa/assets/47845913/01278275-cde9-4d50-931f-b7d66607d00d)
+
 ## Installation
 
 To run the application locally, follow these steps:
